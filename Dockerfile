@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-ENV NAME WEBSERVER
+ENV NAME WEBSERVERTEST
 ARG version_id
 ENV VERSIONID $version_id
 ARG build_date
