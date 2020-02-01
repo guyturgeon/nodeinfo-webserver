@@ -20,7 +20,7 @@ def get_image_name():
 @app.route("/")
 def hello():
     html = "<CENTER><h2>MWC Barcelona Test Node Info {name} ({buildVersion})</h2></CENTER>" \
-           "<CENTER><h4>[ Build Date: {buildDate} ]</h4></CENTER>" \
+            "<CENTER><h4>[ Build TAG 1.0.3 ]</h4></CENTER>" \
            "<CENTER><IMG SRC=\"{imageName}\" ALIGN=\"TOP\"></CENTER>" \
 	   "<HR>" \
 	   "<b>Container:</b><br/>" \
