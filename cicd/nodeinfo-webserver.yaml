@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: nodeinfo
-        image: gwaines/nodeinfo:VERSIONID
+        image: guyturgeon/nodeinfo-webserver:VERSIONID
         imagePullPolicy: Always
         ports:
         - containerPort: 80
