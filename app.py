@@ -10,7 +10,7 @@ def get_ip():
     return socket.gethostbyname(socket.gethostname())
 
 def get_image_name():
-    imageStr = "/static/CloudPlatformLogoText_black.png"
+    imageStr = "/static/CloudPlatformLogoText_red.png"
     platformStr = platform.platform()
     if platformStr.__contains__("yocto"):
         imageStr = "/static/NodeInfoOnWRLINUX.png"
