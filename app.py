@@ -10,7 +10,7 @@ def get_ip():
     return socket.gethostbyname(socket.gethostname())
 
 def get_image_name():
-    imageStr = "/static/NodeInfoOnTITANIUMCENTOS.png"
+    imageStr = "/static/CloudPlatformLogoText_black.png"
     platformStr = platform.platform()
     if platformStr.__contains__("yocto"):
         imageStr = "/static/NodeInfoOnWRLINUX.png"
@@ -19,8 +19,7 @@ def get_image_name():
 
 @app.route("/")
 def hello():
-    html = "<CENTER><h2>MWC Barcelona Test Node Info {name} ({buildVersion})</h2></CENTER>" \
-            "<CENTER><h4>[ Build TAG 1.0.3 ]</h4></CENTER>" \
+    html = "<CENTER><h2>Wind River Cloud Platform Node Information</h2></CENTER>" \
            "<CENTER><IMG SRC=\"{imageName}\" ALIGN=\"TOP\"></CENTER>" \
 	   "<HR>" \
 	   "<b>Container:</b><br/>" \
