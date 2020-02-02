@@ -14,12 +14,17 @@ spec:
   selector:
     app: nodeinfo
 ---
-apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+apiVersion: apps/v1 # for versions before 1.6.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nodeinfo
+  name: nodeinfo-deployment
+  labels:
+    app: nodeinfo
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: nodeinfo
   template:
     metadata:
       labels:
@@ -27,7 +32,7 @@ spec:
     spec:
       containers:
       - name: nodeinfo
-        image: guyturgeon/nodeinfo-webserver:VERSIONID
+        image: guyturgeon/nodeinfo-webserver:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
